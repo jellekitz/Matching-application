@@ -7,7 +7,7 @@ Een applicatie voor het samenbrengen van mensen op wintersport, die gezamenlijk 
 
 ## Getting started
 
-Om de applicatie werkend te krijgen volgen hier een aantal stappen uitgevoerd te worden.
+Om de applicatie werkend te krijgen dienen hier een aantal stappen uitgevoerd te worden.
 
 ### Instalation
 
