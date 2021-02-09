@@ -25,7 +25,7 @@ _in progress_
 
 ## Questions
 
-Voor eventuele vragen over instalatie of andere dingen neem contact op met de **Author** via jellekitz@gmail.com
+Voor eventuele vragen over instalatie of andere zaken neem contact op met de **Author** via jellekitz@gmail.com
 
 ## License
 
