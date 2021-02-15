@@ -5,7 +5,9 @@
     </head>
     <body>
         <header>
-            
+            <% if (user) { %>
+                <p><%= user.name %></p>
+            <% } %>
         </header>
         <main>
             <div>

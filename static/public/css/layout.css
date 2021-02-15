@@ -1,0 +1,42 @@
+/* Variabelen voor paddings, kleuren etc. */
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  position: absolute;
+  background-color: yellow; }
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../img/wintersport-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  main div {
+    position: relative;
+    z-index: 4;
+    max-width: 1080px;
+    margin-bottom: 300px; }
+    main div h1, main div h2 {
+      text-align: center;
+      font-weight: 900;
+      color: #fff; }
+    main div h2 {
+      margin-bottom: 2em; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .2;
+  margin-bottom: 0;
+  max-width: 100%;
+  z-index: 3; }
