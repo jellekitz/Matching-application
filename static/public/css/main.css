@@ -5,7 +5,26 @@
 
 header {
   position: absolute;
-  background-color: yellow; }
+  width: 100%;
+  z-index: 8; }
+  header section:first-of-type {
+    position: absolute;
+    left: 25px;
+    top: 25px; }
+    header section:first-of-type a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900; }
+  header section:last-of-type {
+    position: absolute;
+    right: 25px;
+    top: 25px; }
+    header section:last-of-type a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900; }
+      header section:last-of-type a:first-of-type {
+        margin-right: 20px; }
 
 main {
   min-width: 100vw;
@@ -15,19 +34,78 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
   justify-content: center; }
-  main div {
+  main section {
     position: relative;
     z-index: 4;
-    max-width: 1080px;
-    margin-bottom: 300px; }
-    main div h1, main div h2 {
-      text-align: center;
+    max-width: 1080px; }
+    main section h1, main section h2 {
       font-weight: 900;
       color: #fff; }
-    main div h2 {
-      margin-bottom: 2em; }
+    main section.search {
+      margin-top: 100px; }
+      main section.search h1, main section.search h2 {
+        text-align: center; }
+      main section.search h2 {
+        margin-bottom: 2em; }
+      main section.search form input, main section.search form select {
+        padding: 0.75em;
+        min-width: 200px;
+        max-height: 44px;
+        color: #92a1a9;
+        font-size: 1em;
+        border: 1px solid #92a1a9;
+        margin-left: -6px; }
+        main section.search form input:focus, main section.search form select:focus {
+          outline: none; }
+        main section.search form input:hover, main section.search form select:hover {
+          cursor: pointer; }
+      main section.search form select {
+        padding-top: 11px;
+        border-radius: 5px 0 0 5px; }
+      main section.search form input[type=date] {
+        padding: 0.588em;
+        border-radius: 0 5px 5px 0; }
+      main section.search form input[type=submit] {
+        background-color: #ed2924;
+        margin-left: 0.75em;
+        border-radius: 20px;
+        color: #fff;
+        border: none; }
+    main section.register {
+      margin-top: 50px; }
+      main section.register h1 {
+        margin-bottom: 0.75em; }
+      main section.register div {
+        min-width: 500px;
+        padding: 2em 1.5em;
+        background-color: #fff; }
+        main section.register div p:first-of-type {
+          font-weight: 900;
+          margin-bottom: 0.75em; }
+      main section.register form {
+        min-width: 500px;
+        padding: 2em 1.5em;
+        background-color: #fff; }
+        main section.register form input {
+          display: block;
+          padding: 0.75em;
+          width: -webkit-fill-available;
+          margin-bottom: 2em; }
+          main section.register form input:last-of-type {
+            margin-bottom: 0; }
+        main section.register form label {
+          display: block;
+          font-weight: 900;
+          margin-bottom: 0.75em; }
+        main section.register form input[type=submit] {
+          background-color: #ed2924;
+          margin-right: 0;
+          margin-left: auto;
+          border-radius: 20px;
+          color: #fff;
+          border: none;
+          max-width: 200px; }
 
 .overlay {
   position: absolute;
@@ -69,30 +147,3 @@ h6 {
   font-size: 1.6em; }
 
 /* Variabelen voor paddings, kleuren etc. */
-form input, form select {
-  padding: 0.75em;
-  min-width: 200px;
-  max-height: 44px;
-  color: #92a1a9;
-  font-size: 1em;
-  border: 1px solid #92a1a9;
-  margin-left: -6px; }
-  form input:focus, form select:focus {
-    outline: none; }
-  form input:hover, form select:hover {
-    cursor: pointer; }
-
-form select {
-  padding-top: 11px;
-  border-radius: 5px 0 0 5px; }
-
-form input[type=date] {
-  padding: 0.588em;
-  border-radius: 0 5px 5px 0; }
-
-form input[type=submit] {
-  background-color: #ed2924;
-  margin-left: 0.75em;
-  border-radius: 20px;
-  color: #fff;
-  border: none; }
