@@ -1,4 +1,6 @@
 /* Variabelen voor paddings, kleuren etc. */
+/* Variabelen voor paddings, kleuren etc. */
+/* Responsive variables */
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
@@ -24,3 +26,6 @@ h5 {
 
 h6 {
   font-size: 1.6em; }
+
+form input {
+  font-family: 'Quicksand', sans-serif; }

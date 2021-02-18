@@ -1,4 +1,5 @@
 @import 'var.scss';
+@import 'mixins.scss';
 
 body{
     font-family: 'Quicksand', sans-serif;
@@ -32,4 +33,10 @@ h5{
 
 h6{
     font-size: 1.6em;
+}
+
+form{
+    input{
+        font-family: 'Quicksand', sans-serif;
+    }
 }

@@ -1,0 +1,18 @@
+@import "var.scss";
+
+/* Responsive variables */
+
+@mixin breakpoint($point) {
+  @if $point == big-desktop {
+    @media (min-width: 1300px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == small-desktop {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 767px)  { @content ; }
+  }
+}
