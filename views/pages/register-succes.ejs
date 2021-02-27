@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <%- include('../partials/head'); %>
-    </head>
-    <body>
-        <header>
-            <%- include('../partials/header'); %>
-        </header>
-        <main>
-            <section class="register">
-                <h1>Aanmelden gelukt!</h1>
-                <div>
-                    <p>Bedankt voor je aanmelding <%= data.naam %>!</p>
-                    <p>Je bent nu te zien tussen alle mensen in het gebied <%= data.locatie %> rond de datum <%= data.datum %></p>
-                </div>
-            </section>
-            <div class="overlay"></div>
-        </main>
-        <footer>
-            <%- include('../partials/footer'); %>
-        </footer>
-    </body>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <main class="background_img">
+        <section class="register">
+            <h1>Aanmelden gelukt!</h1>
+            <div>
+                <p>Bedankt voor je aanmelding <%= user.name %>!</p>
+                <p>Pas <a href="/account">hier</a> je account aan om je voorkeuren aan te passen</p>
+            </div>
+        </section>
+        <div class="overlay"></div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+
 </html>

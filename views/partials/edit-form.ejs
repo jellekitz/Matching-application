@@ -1,0 +1,17 @@
+<form action="/update" method="POST">
+    <section>
+        <div>
+            <label for="name">(voor)naam</label>
+            <input type="text" name="name" id="name" value="<%= userInfo.name %>">
+        </div>
+        <div>
+            <label for="age">leeftijd</label>
+            <input type="text" name="age" id="age" value="<%= userInfo.age %>">
+        </div>
+    </section>
+    <label for="email">e-mail</label>
+    <input type="email" name="email" id="email" value="<%= userInfo.email %>">
+    <label for="password">wachtwoord</label>
+    <input type="password" name="password" id="password" value="<%= userInfo.password %>">
+    <input type="submit" value="veranderen">
+</form>

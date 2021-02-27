@@ -1,4 +1,5 @@
 const express = require('express')
+require('./db.js');
 const app = express()
 const path = require('path')
 const port = 3000
@@ -15,10 +16,10 @@ app.use(express.static(path.join(__dirname, 'static/public')))
 app.use('/', router)
 
 // 404 page
-app.get('*', function(req, res){
+app.get('*', function (req, res) {
     res.send('404 not found', 404)
 });
 
 app.listen(port, () => {
-  console.log(`Matching-application listening at http://localhost:${port}`)
+    console.log(`Matching-application listening at http://localhost:${port}`)
 })
