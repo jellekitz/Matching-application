@@ -13,15 +13,47 @@ Om de applicatie werkend te krijgen dienen hier een aantal stappen uitgevoerd te
 
 **NPM-packages**
 
-De volgende NPM-packages dienen gedownload te worden via de terminal.
+De volgende NPM-packages dienen als "devDependencies" gedownload te worden via de terminal.
 
-1. Nodemon
-1. Camelcase
-1. SASS
+1. node-sass    ^5.0.0
+
+```npm install --save-dev node-sass```
+
+1. nodemon      ^2.0.7
+
+```npm install --save-dev nodemon```
+
+De volgende NPM-packages dienen als "dependencies" gedownload te worden via de terminal.
+
+1. body-parser  ^1.19.0
+
+```npm install body-parser```
+
+1. camelcase    ^6.2.0
+
+```npm install camelcase```
+
+1. dotenv       ^8.2.0
+
+```npm install dotenv```
+
+1. ejs          ^3.1.6
+
+```npm install ejs```
+
+1. express      ^4.17.1
+
+```npm install express```
+
+1. mongodb      ^3.6.3
+
+```npm install mongodb```
 
 ### Usage
 
-_in progress_
+Om de app te starten dient u het volgende commando te gebruiken:
+
+```npm start```
 
 ## Questions
 
