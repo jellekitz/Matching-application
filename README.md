@@ -19,7 +19,7 @@ De volgende NPM-packages dienen als "devDependencies" gedownload te worden via d
 
 ```npm install --save-dev node-sass```
 
-1. nodemon      ^2.0.7
+2. nodemon      ^2.0.7
 
 ```npm install --save-dev nodemon```
 
@@ -29,23 +29,23 @@ De volgende NPM-packages dienen als "dependencies" gedownload te worden via de t
 
 ```npm install body-parser```
 
-1. camelcase    ^6.2.0
+2. camelcase    ^6.2.0
 
 ```npm install camelcase```
 
-1. dotenv       ^8.2.0
+3. dotenv       ^8.2.0
 
 ```npm install dotenv```
 
-1. ejs          ^3.1.6
+4. ejs          ^3.1.6
 
 ```npm install ejs```
 
-1. express      ^4.17.1
+5. express      ^4.17.1
 
 ```npm install express```
 
-1. mongodb      ^3.6.3
+6. mongodb      ^3.6.3
 
 ```npm install mongodb```
 
