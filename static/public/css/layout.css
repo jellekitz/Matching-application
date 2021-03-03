@@ -9,14 +9,16 @@ header {
   position: absolute;
   width: 100%;
   z-index: 8; }
+  header.account-header a {
+    color: #000; }
+  header section a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900; }
   header section:first-of-type {
     position: absolute;
     left: 16px;
     top: 25px; }
-    header section:first-of-type a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 900; }
     @media (min-width: 768px) {
       header section:first-of-type {
         left: 25px; } }
@@ -24,12 +26,8 @@ header {
     position: absolute;
     right: 16px;
     top: 25px; }
-    header section:last-of-type a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 900; }
-      header section:last-of-type a:first-of-type {
-        margin-right: 20px; }
+    header section:last-of-type a:first-of-type {
+      margin-right: 20px; }
     @media (min-width: 768px) {
       header section:last-of-type {
         right: 25px; } }
@@ -162,6 +160,32 @@ main section {
     padding: 0; }
     main section.account section h2 {
       color: #000; }
+    main section.account section form section {
+      padding: 0; }
+      main section.account section form section div {
+        padding: 0;
+        margin-bottom: 2em; }
+    main section.account section form input {
+      display: block;
+      font-size: 1em;
+      padding: 0.75em;
+      border: 1px solid #92a1a9;
+      width: -webkit-fill-available;
+      margin-bottom: 2em; }
+      main section.account section form input:last-of-type {
+        margin-bottom: 0; }
+    main section.account section form label {
+      display: block;
+      font-weight: 900;
+      margin-bottom: 0.75em; }
+    main section.account section form input[type=submit] {
+      background-color: #ed2924;
+      margin-right: 0;
+      margin-left: auto;
+      border-radius: 20px;
+      color: #fff;
+      border: none;
+      max-width: 200px; }
   @media (min-width: 768px) {
     main section {
       max-width: 1080px;

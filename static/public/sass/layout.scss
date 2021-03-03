@@ -10,17 +10,24 @@ header{
     position: absolute;
     width: 100%;
     z-index: 8;
+
+    &.account-header{
+        a{
+            color: $black;
+        }
+    }
+
     section{
+
+        a{
+            color: $white;
+            text-decoration: none;
+            font-weight: 900;
+        }
         &:first-of-type{
             position: absolute;
             left: 16px;
             top: 25px;
-
-            a{
-                color: $white;
-                text-decoration: none;
-                font-weight: 900;
-            }
 
             @include breakpoint(small-desktop){
                 left: 25px;
@@ -32,9 +39,6 @@ header{
             top: 25px;
 
             a{
-                color: $white;
-                text-decoration: none;
-                font-weight: 900;
                 &:first-of-type{
                     margin-right: 20px;
                 }
@@ -241,6 +245,44 @@ main{
 
                 h2{
                     color: $black;
+                }
+                
+                form{
+
+                    section{
+                        padding: 0;
+    
+                        div{
+                            padding: 0;
+                            margin-bottom: 2em;
+                        }
+                    }
+                
+                    input{
+                        display: block;
+                        font-size: 1em;
+                        padding: $small-padding;
+                        border: 1px solid $grey;
+                        width: -webkit-fill-available;
+                        margin-bottom: $huge-padding;
+                        &:last-of-type{
+                            margin-bottom: 0;
+                        }
+                    }
+                    label{
+                        display: block;
+                        font-weight: 900;
+                        margin-bottom: $small-padding;
+                    }
+                    input[type=submit]{
+                        background-color: $red;
+                        margin-right: 0;
+                        margin-left: auto;
+                        border-radius: 20px;
+                        color: $white;
+                        border: none;
+                        max-width: 200px;
+                    }
                 }
             }
         }
