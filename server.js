@@ -1,5 +1,4 @@
 const express = require('express')
-require('./db.js');
 const app = express()
 const path = require('path')
 const port = 3000

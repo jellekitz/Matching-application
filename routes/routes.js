@@ -1,10 +1,31 @@
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
-const { MongoClient } = require('mongodb')
-const objectID = require('mongodb').objectID
-const client = require('../db.js')
+const { MongoClient } = require("mongodb")
+require('dotenv').config()
+const url = process.env.MONGODB_URL
+const client = new MongoClient(url, { useUnifiedTopology: true })
+const ObjectID = require('mongodb').ObjectID
 // const assert = require('assert')
+
+
+
+// Database
+const dbName = process.env.DB_NAME
+
+async function run() {
+    try {
+        await client.connect()
+        console.log("Connected correctly to server")
+        const db = client.db(dbName)
+    } catch (err) {
+        console.error(err.stack)
+    }
+    return client
+}
+run().catch(console.dir)
+
+
 
 // urlencodedParser variabele voor middleware
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -35,6 +56,8 @@ router.post('/account', urlencodedParser, function (req, res) {
         age: req.body.age,
         password: req.body.password
     }
+
+    const db = client.db(dbName)
 
     db.collection('users').insertOne(userInfo, function () {
         console.log(userInfo.name, 'toegevoegd')
@@ -77,43 +100,37 @@ router.get('/login', function (req, res) {
 // })
 
 // update
-// router.post('/update:id', function (req, res) {
-//     const userInfo = {
-//         name: req.body.name,
-//         email: req.body.email,
-//         age: req.body.age,
-//         password: req.body.password
-//     }
+router.post('/account/update', urlencodedParser, function (req, res) {
+    const userInfo = {
+        name: req.body.name,
+        email: req.body.email,
+        age: req.body.age,
+        password: req.body.password
+    }
 
-//     const id = req.body.id
+    const db = client.db(dbName)
 
-//     MongoClient.connect(url, function (err, client) {
-//         assert.equal(null, err)
-//         const db = client.db(dbName);
-//         db.collection('users').updateOne({ "_id": objectID(id) }, { $set: userInfo }, function () {
-//             assert.equal(null, err)
-//             console.log(userInfo.name, 'aangepast')
-//             res.redirect('/account')
-//             client.close()
-//         })
-//     })
-// })
+    const ObjectID = require('mongodb').ObjectID
+
+    db.collection('users').updateOne({ "_id": ObjectID(req.body._id) }, { $set: userInfo }, { upsert: true }, function () {
+        console.log(userInfo.name, 'geupdate')
+        res.redirect('/account')
+        client.close()
+    })
+})
 
 // delete
-// router.post('/delete:id', function (req, res) {
-//     const id = req.body.id
+router.post('/account/delete', urlencodedParser, function (req, res) {
+    const db = client.db(dbName)
 
-//     MongoClient.connect(url, function (err, client) {
-//         assert.equal(null, err)
-//         const db = client.db(dbName);
-//         db.collection('users').deleteOne({ "_id": objectID(id) }, function () {
-//             assert.equal(null, err)
-//             console.log('gebruiker verwijderd')
-//             res.redirect('/account')
-//             client.close()
-//         })
-//     })
-// })
+    const ObjectID = require('mongodb').ObjectID
+
+    db.collection('users').deleteOne({ "_id": ObjectID(req.body._id) }, function () {
+        console.log('deleted')
+        res.redirect('/')
+        client.close()
+    })
+})
 
 
 
