@@ -51,19 +51,18 @@ router.get('/register', urlencodedParser, function (req, res) {
 // Data naar de database inserten
 router.post('/account', urlencodedParser, function (req, res) {
     const userInfo = {
+        userID: ObjectID().toString(),
         name: req.body.name,
         email: req.body.email,
         age: req.body.age,
         password: req.body.password
     }
-
     const db = client.db(dbName)
-
     db.collection('users').insertOne(userInfo, function () {
         console.log(userInfo.name, 'toegevoegd')
-        client.close()
+        // client.close()
     })
-    res.render('pages/account', { userInfo: req.body })
+    res.render('pages/account', { userInfo: userInfo })
 })
 
 
@@ -102,6 +101,7 @@ router.get('/login', function (req, res) {
 // update
 router.post('/account/update', urlencodedParser, function (req, res) {
     const userInfo = {
+        userID: req.body.userID,
         name: req.body.name,
         email: req.body.email,
         age: req.body.age,
@@ -110,25 +110,29 @@ router.post('/account/update', urlencodedParser, function (req, res) {
 
     const db = client.db(dbName)
 
-    const ObjectID = require('mongodb').ObjectID
-
-    db.collection('users').updateOne({ "_id": ObjectID(req.body._id) }, { $set: userInfo }, { upsert: true }, function () {
+    db.collection('users').updateOne({ "userID": req.body.userID }, { $set: userInfo }, function () {
         console.log(userInfo.name, 'geupdate')
-        res.redirect('/account')
-        client.close()
+        res.render('pages/account', { userInfo: userInfo })
     })
 })
 
+
+
 // delete
 router.post('/account/delete', urlencodedParser, function (req, res) {
+    const userInfo = {
+        userID: req.body.userID,
+        name: req.body.name,
+        email: req.body.email,
+        age: req.body.age,
+        password: req.body.password
+    }
+
     const db = client.db(dbName)
 
-    const ObjectID = require('mongodb').ObjectID
-
-    db.collection('users').deleteOne({ "_id": ObjectID(req.body._id) }, function () {
-        console.log('deleted')
-        res.redirect('/')
-        client.close()
+    db.collection('users').deleteOne({ "userID": req.body.userID }, function () {
+        console.log(userInfo.userID, 'deleted')
+        res.render('pages/delete-succes', { userInfo: userInfo })
     })
 })
 

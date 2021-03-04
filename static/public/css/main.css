@@ -61,15 +61,16 @@ main section {
     font-weight: 900;
     color: #fff;
     font-size: 1.4em; }
+  main section form input, main section form select {
+    padding: 0.75em;
+    color: #92a1a9;
+    font-size: 1em;
+    border: 1px solid #92a1a9; }
   main section.search h2 {
     margin-bottom: 1.5em; }
   main section.search form {
     display: grid; }
     main section.search form input, main section.search form select {
-      padding: 0.75em;
-      color: #92a1a9;
-      font-size: 1em;
-      border: 1px solid #92a1a9;
       margin-bottom: 1.5em;
       background-color: #fff;
       width: -webkit-fill-available; }
@@ -179,13 +180,14 @@ main section {
       font-weight: 900;
       margin-bottom: 0.75em; }
     main section.account section form input[type=submit] {
-      background-color: #ed2924;
+      background-color: #92a1a9;
       margin-right: 0;
-      margin-left: auto;
       border-radius: 20px;
       color: #fff;
       border: none;
-      max-width: 200px; }
+      margin-bottom: 1em; }
+    main section.account section form:last-of-type input[type=submit] {
+      background-color: #ed2924; }
   @media (min-width: 768px) {
     main section {
       max-width: 1080px;

@@ -1,5 +1,6 @@
 <form action="/account/delete" method="POST">
     <section>
-        <input type="submit" value="verwijder account">
+        <input type="hidden" name="userID" value="<%= userInfo.userID %>">
+        <input type="submit" value="account verwijderen">
     </section>
 </form>

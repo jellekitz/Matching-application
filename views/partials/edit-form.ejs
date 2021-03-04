@@ -1,6 +1,7 @@
 <form action="/account/update" method="POST">
     <section>
         <div>
+            <input type="hidden" name="userID" value="<%= userInfo.userID %>">
             <label for="name">(voor)naam</label>
             <input type="text" name="name" id="name" value="<%= userInfo.name %>">
         </div>
@@ -13,5 +14,5 @@
     <input type="email" name="email" id="email" value="<%= userInfo.email %>">
     <label for="password">wachtwoord</label>
     <input type="password" name="password" id="password" value="<%= userInfo.password %>">
-    <input type="submit" value="veranderen">
+    <input type="submit" value="account veranderen">
 </form>

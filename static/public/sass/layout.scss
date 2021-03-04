@@ -89,6 +89,17 @@ main{
             font-size: 1.4em;
         }
 
+        form{
+
+            input, select{
+                padding: $small-padding;
+                color: $grey;
+                font-size: 1em;
+                border: 1px solid $grey;
+            }
+
+        }
+
         &.search{
 
             h2{
@@ -99,10 +110,6 @@ main{
                 display: grid;
 
                 input, select{
-                    padding: $small-padding;
-                    color: $grey;
-                    font-size: 1em;
-                    border: 1px solid $grey;
                     margin-bottom: $large-padding;
                     background-color: $white;
                     width: -webkit-fill-available;
@@ -275,13 +282,18 @@ main{
                         margin-bottom: $small-padding;
                     }
                     input[type=submit]{
-                        background-color: $red;
+                        background-color: $grey;
                         margin-right: 0;
-                        margin-left: auto;
                         border-radius: 20px;
                         color: $white;
                         border: none;
-                        max-width: 200px;
+                        margin-bottom: $medium-padding;
+                    }
+
+                    &:last-of-type{
+                        input[type=submit]{
+                            background-color: $red;
+                        }
                     }
                 }
             }
