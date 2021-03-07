@@ -26,7 +26,7 @@ run().catch(console.dir)
 
 
 
-// urlencodedParser variabele voor middleware
+// urlencodedParser variabele, middleware
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
@@ -34,7 +34,12 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 // home pagina
 
 router.get('/', function (req, res) {
-    res.render('pages/index')
+
+    const db = client.db(dbName)
+
+    db.collection('users').find().toArray(function (err, users) {
+        res.render('pages/index', { users: users })
+    })
 })
 
 
@@ -59,7 +64,6 @@ router.post('/account', urlencodedParser, function (req, res) {
     const db = client.db(dbName)
     db.collection('users').insertOne(userInfo, function () {
         console.log(userInfo.name, 'toegevoegd')
-        // client.close()
     })
     res.render('pages/account', { userInfo: userInfo })
 })
@@ -74,28 +78,6 @@ router.get('/login', function (req, res) {
 })
 
 
-
-// account pagina 
-
-// router.get('/account', function (req, res) {
-//     res.render('pages/account', { userInfo: req.body })
-// })
-
-// get (vinden van de gebruiker die zojuist is geregistreerd)
-// router.get('/account', function (req, res) {
-//     const resultArray = {}
-//     MongoClient.connect(url, function (err, client) {
-//         assert.equal(null, err)
-//         const cursor = db.collection('users').find()
-//         cursor.forEach(function (doc, err) {
-//             assert.equal(null, err)
-//             resultArray.push(doc)
-//         }, function () {
-//             client.close()
-//             res.render('pages/account', { userInfo: resultArray })
-//         })
-//     })
-// })
 
 // update
 router.post('/account/update', urlencodedParser, function (req, res) {
@@ -142,6 +124,13 @@ router.post('/account/delete', urlencodedParser, function (req, res) {
 router.get('/result', function (req, res) {
     res.render('pages/result')
 })
+
+
+
+// 404 page
+router.get('*', function (req, res) {
+    res.send('404 not found', 404)
+});
 
 
 

@@ -236,6 +236,39 @@ main section {
       main section.account:last-of-type input[type=submit] {
         margin-bottom: 0; } }
 
+section.active_users {
+  padding: 2em 1em 2em 1em; }
+  section.active_users h3 {
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1em; }
+  section.active_users div {
+    padding: 1em; }
+    section.active_users div article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 75px; }
+      section.active_users div article li {
+        list-style: none;
+        text-align: center; }
+        section.active_users div article li:last-of-type {
+          margin-bottom: 0; }
+        section.active_users div article li img {
+          max-width: 100px;
+          border-radius: 50%;
+          margin-bottom: 0.75em; }
+  @media (min-width: 768px) {
+    section.active_users {
+      max-width: 1080px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto; }
+      section.active_users div article {
+        grid-column-gap: 100px;
+        grid-template-columns: 1fr 1fr 1fr; } }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -247,6 +280,14 @@ main section {
   margin-bottom: 0;
   max-width: 100%;
   z-index: 3; }
+
+footer {
+  background-color: #08ADC0;
+  color: #fff;
+  padding: 4em;
+  text-align: center; }
+  footer p {
+    font-weight: 900; }
 
 /* Variabelen voor paddings, kleuren etc. */
 /* Variabelen voor paddings, kleuren etc. */

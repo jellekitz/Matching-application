@@ -330,6 +330,49 @@ main{
     }
 }
 
+section.active_users{
+    padding: $huge-padding $medium-padding $huge-padding $medium-padding;
+    h3{
+        flex-basis: 100%;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: $medium-padding;
+    }
+    div{
+        padding: $medium-padding;
+        article{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 75px;
+            li{
+                list-style: none;
+                text-align: center;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                img{
+                    max-width: 100px;
+                    border-radius: 50%;
+                    margin-bottom: $small-padding;
+                }
+            }
+        }
+    }
+    @include breakpoint(small-desktop){
+        max-width: $site-width;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        div{
+            article{
+                grid-column-gap: 100px;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
 .overlay{
     position: absolute;
     top: 0;
@@ -341,4 +384,14 @@ main{
     margin-bottom: 0;
     max-width: 100%;
     z-index: 3;
+}
+
+footer{
+    background-color: $blue;
+    color: $white;
+    padding: 4em;
+    text-align: center;
+    p{
+        font-weight: 900;
+    }
 }

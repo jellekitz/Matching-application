@@ -14,11 +14,6 @@ app.use(express.static(path.join(__dirname, 'static/public')))
 // router files
 app.use('/', router)
 
-// 404 page
-app.get('*', function (req, res) {
-    res.send('404 not found', 404)
-});
-
 app.listen(port, function (req, res) {
     console.log(`Matching-application listening at http://localhost:${port}`)
 })
