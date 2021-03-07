@@ -10,8 +10,8 @@ Een applicatie voor het samenbrengen van mensen op wintersport, die gezamenlijk 
 - [Getting started](#getting-started)
   - [Installation](#installation)
   - [Usage](#usage)
-- [Questions](questions)
-- [Licence](license)
+- [Questions](#questions)
+- [Licence](#license)
 
 ## Getting started
 
