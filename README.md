@@ -55,18 +55,18 @@ De Matching-application maakt gebruik van een MIT license, voor meer informatie 
 
 ## Bronnen
 
-markdownguide.org. (z.d.). Basic Syntax | Markdown Guide. Geraadpleegd op 7 maart 2021, van https://www.markdownguide.org/basic-syntax/
+- markdownguide.org. (z.d.). Basic Syntax | Markdown Guide. Geraadpleegd op 7 maart 2021, van https://www.markdownguide.org/basic-syntax/
 
-Express. (z.d.). Express routing. expressjs.com. Geraadpleegd op 7 maart 2021, van https://expressjs.com/en/guide/routing.html
+- Express. (z.d.). Express routing. expressjs.com. Geraadpleegd op 7 maart 2021, van https://expressjs.com/en/guide/routing.html
 
-NPM. (2020, 31 oktober). npm: node-sass. npmjs.com. https://www.npmjs.com/package/node-sass
+- NPM. (2020, 31 oktober). npm: node-sass. npmjs.com. https://www.npmjs.com/package/node-sass
 
-EJS. (z.d.). EJS -- Embedded JavaScript templates. ejs.co. Geraadpleegd op 7 maart 2021, van https://ejs.co/#install
+- EJS. (z.d.). EJS -- Embedded JavaScript templates. ejs.co. Geraadpleegd op 7 maart 2021, van https://ejs.co/#install
 
-Academind. (2016a, maart 31). Node.js + Express - Tutorial - Insert and Get Data with MongoDB. YouTube. https://www.youtube.com/watch?v=ZKwrOXl5TDI
+- Academind. (2016a, maart 31). Node.js + Express - Tutorial - Insert and Get Data with MongoDB. YouTube. https://www.youtube.com/watch?v=ZKwrOXl5TDI
 
-Academind. (2016b, april 5). Node.js + Express - Tutorial - Update and Delete Data with MongoDB. YouTube. https://www.youtube.com/watch?v=-JcgwLIh0Z4&t=56s
+- Academind. (2016b, april 5). Node.js + Express - Tutorial - Update and Delete Data with MongoDB. YouTube. https://www.youtube.com/watch?v=-JcgwLIh0Z4&t=56s
 
-mongoDB. (z.d.). MongoDB Node Driver — Node.js. mongodb.com. Geraadpleegd op 7 maart 2021, van https://docs.mongodb.com/drivers/node/
+- mongoDB. (z.d.). MongoDB Node Driver — Node.js. mongodb.com. Geraadpleegd op 7 maart 2021, van https://docs.mongodb.com/drivers/node/
 
-& Lesstof en informatie opgedaan door student assistenten.
+- & Lesstof en informatie opgedaan door student assistenten.
