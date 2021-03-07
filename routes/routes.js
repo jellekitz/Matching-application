@@ -6,7 +6,6 @@ require('dotenv').config()
 const url = process.env.MONGODB_URL
 const client = new MongoClient(url, { useUnifiedTopology: true })
 const ObjectID = require('mongodb').ObjectID
-// const assert = require('assert')
 
 
 
@@ -105,7 +104,11 @@ router.post('/account/update', urlencodedParser, function (req, res) {
         name: req.body.name,
         email: req.body.email,
         age: req.body.age,
-        password: req.body.password
+        password: req.body.password,
+        area: req.body.area,
+        date: req.body.date,
+        myGender: req.body.myGender,
+        searchGender: req.body.searchGender
     }
 
     const db = client.db(dbName)
@@ -121,11 +124,7 @@ router.post('/account/update', urlencodedParser, function (req, res) {
 // delete
 router.post('/account/delete', urlencodedParser, function (req, res) {
     const userInfo = {
-        userID: req.body.userID,
-        name: req.body.name,
-        email: req.body.email,
-        age: req.body.age,
-        password: req.body.password
+        userID: req.body.userID
     }
 
     const db = client.db(dbName)
