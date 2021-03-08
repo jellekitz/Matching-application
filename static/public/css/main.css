@@ -56,6 +56,31 @@ main.background_img-2 {
   main.background_img-2 .overlay {
     display: none; }
 
+main.background_404 {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("https://media1.tenor.com/images/c61527b51ca2ffcdb5bdcda00a04e2bd/tenor.gif?itemid=14767833");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  main.background_404 section {
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+    padding: 4em 2em 4em 2em;
+    text-align: center; }
+    main.background_404 section h1 {
+      color: #000;
+      margin-bottom: 1em; }
+    main.background_404 section p {
+      font-weight: 500;
+      margin-bottom: 1em; }
+      main.background_404 section p:last-of-type {
+        margin-bottom: 0; }
+
 main section {
   position: relative;
   z-index: 4;
@@ -317,6 +342,10 @@ h5 {
 
 h6 {
   font-size: 1.6em; }
+
+a {
+  color: #ed2924;
+  font-weight: 900; }
 
 form input {
   font-family: 'Quicksand', sans-serif; }

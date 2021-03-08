@@ -81,6 +81,35 @@ main{
             display: none;
         }
     }
+    &.background_404{
+        min-width: 100vw;
+        min-height: 100vh;
+        background-image: url('https://media1.tenor.com/images/c61527b51ca2ffcdb5bdcda00a04e2bd/tenor.gif?itemid=14767833');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        section{
+            background-color: $white;
+            position: relative;
+            z-index: 4;
+            padding: 4em $huge-padding 4em $huge-padding;
+            text-align: center;
+            h1{
+                color: $black;
+                margin-bottom: $medium-padding;
+            }
+            p{
+                font-weight: 500;
+                margin-bottom: $medium-padding;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
     section{
         position: relative;
         z-index: 4;

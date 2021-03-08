@@ -129,7 +129,7 @@ router.get('/result', function (req, res) {
 
 // 404 page
 router.get('*', function (req, res) {
-    res.send('404 not found', 404)
+    res.render('pages/404')
 });
 
 

@@ -27,5 +27,9 @@ h5 {
 h6 {
   font-size: 1.6em; }
 
+a {
+  color: #ed2924;
+  font-weight: 900; }
+
 form input {
   font-family: 'Quicksand', sans-serif; }
