@@ -15,19 +15,6 @@
         </section>
         <div class="overlay"></div>
     </main>
-    <section class="active_users">
-        <h3>Actieve gebruikers</h3>
-        <div>
-            <article>
-                <% users.forEach(function(users) { %>
-                    <li>
-                        <img src="../../img/no-user.png" alt="no user image">
-                        <p><%= users.name %></p>
-                    </li>
-                <% }) %>
-            </article>
-        </div>
-    </section>
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
