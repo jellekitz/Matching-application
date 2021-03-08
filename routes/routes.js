@@ -37,6 +37,7 @@ router.get('/', function (req, res) {
 
     const db = client.db(dbName)
 
+    // het vinden van alle gebruikers in de collectie users, deze worden op de homepagina gerenderd
     db.collection('users').find().toArray(function (err, users) {
         res.render('pages/index', { users: users })
     })
@@ -55,13 +56,15 @@ router.get('/register', urlencodedParser, function (req, res) {
 // Data naar de database inserten
 router.post('/account', urlencodedParser, function (req, res) {
     const userInfo = {
-        userID: ObjectID().toString(),
+        userID: ObjectID().toString(), // maakt een nieuw ObjectID aan en zet deze om in een string (voor het vinden van de gebruiker bij update)
         name: req.body.name,
         email: req.body.email,
         age: req.body.age,
         password: req.body.password
     }
+
     const db = client.db(dbName)
+
     db.collection('users').insertOne(userInfo, function () {
         console.log(userInfo.name, 'toegevoegd')
     })
@@ -79,7 +82,7 @@ router.get('/login', function (req, res) {
 
 
 
-// update
+// update route
 router.post('/account/update', urlencodedParser, function (req, res) {
     const userInfo = {
         userID: req.body.userID,
@@ -95,6 +98,7 @@ router.post('/account/update', urlencodedParser, function (req, res) {
 
     const db = client.db(dbName)
 
+    // update de gebruiker met het aangemakkte userID
     db.collection('users').updateOne({ "userID": req.body.userID }, { $set: userInfo }, function () {
         console.log(userInfo.name, 'geupdate')
         res.render('pages/account', { userInfo: userInfo })
@@ -103,7 +107,7 @@ router.post('/account/update', urlencodedParser, function (req, res) {
 
 
 
-// delete
+// delete route
 router.post('/account/delete', urlencodedParser, function (req, res) {
     const userInfo = {
         userID: req.body.userID
@@ -111,18 +115,11 @@ router.post('/account/delete', urlencodedParser, function (req, res) {
 
     const db = client.db(dbName)
 
+    // verwijder de gerbuiker met het aangemaakte userID
     db.collection('users').deleteOne({ "userID": req.body.userID }, function () {
         console.log(userInfo.userID, 'deleted')
         res.render('pages/delete-succes', { userInfo: userInfo })
     })
-})
-
-
-
-// resultaten pagina (hier komen de resulaten van het filteren)
-
-router.get('/result', function (req, res) {
-    res.render('pages/result')
 })
 
 
@@ -133,5 +130,5 @@ router.get('*', function (req, res) {
 });
 
 
-
+// export de module zodat we hem weer kunnen gebruiker in server.js
 module.exports = router;

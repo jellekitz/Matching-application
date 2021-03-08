@@ -71,6 +71,7 @@ main.background_404 {
     position: relative;
     z-index: 4;
     padding: 4em 2em 4em 2em;
+    margin: 0 1em 0 1em;
     text-align: center; }
     main.background_404 section h1 {
       color: #000;

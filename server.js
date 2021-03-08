@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'))
 // static files
 app.use(express.static(path.join(__dirname, 'static/public')))
 
-// router files
+// router files, hier gebruiken we de router functie van express
 app.use('/', router)
 
 app.listen(port, function (req, res) {
