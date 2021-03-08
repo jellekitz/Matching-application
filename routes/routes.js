@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
-const { MongoClient } = require("mongodb")
+const { MongoClient } = require('mongodb')
 require('dotenv').config()
 const url = process.env.MONGODB_URL
 const client = new MongoClient(url, { useUnifiedTopology: true })
@@ -15,7 +15,7 @@ const dbName = process.env.DB_NAME
 async function run() {
     try {
         await client.connect()
-        console.log("Connected correctly to server")
+        console.log('Connected correctly to server')
         const db = client.db(dbName)
     } catch (err) {
         console.error(err.stack)
@@ -99,7 +99,7 @@ router.post('/account/update', urlencodedParser, function (req, res) {
     const db = client.db(dbName)
 
     // update de gebruiker met het aangemakkte userID
-    db.collection('users').updateOne({ "userID": req.body.userID }, { $set: userInfo }, function () {
+    db.collection('users').updateOne({ 'userID': req.body.userID }, { $set: userInfo }, function () {
         console.log(userInfo.name, 'geupdate')
         res.render('pages/account', { userInfo: userInfo })
     })
@@ -116,7 +116,7 @@ router.post('/account/delete', urlencodedParser, function (req, res) {
     const db = client.db(dbName)
 
     // verwijder de gerbuiker met het aangemaakte userID
-    db.collection('users').deleteOne({ "userID": req.body.userID }, function () {
+    db.collection('users').deleteOne({ 'userID': req.body.userID }, function () {
         console.log(userInfo.userID, 'deleted')
         res.render('pages/delete-succes', { userInfo: userInfo })
     })
