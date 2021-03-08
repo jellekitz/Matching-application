@@ -4,7 +4,7 @@
   "description": "dit is een project voor blok-tech",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "sass": "node-sass --watch static/public/sass -o static/public/css"
   },
   "author": "jelle kitzen",
