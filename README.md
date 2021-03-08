@@ -11,6 +11,7 @@ Een applicatie voor het samenbrengen van mensen op wintersport, die gezamenlijk 
   - [Installation](#installation)
   - [Usage](#usage)
 - [Questions](#questions)
+- [Documentation](#documentation)
 - [Licence](#license)
 - [Bronnen](#bronnen)
 
@@ -49,9 +50,13 @@ De Matching-application draait op localhost:3000, voer deze in in de adres-balk 
 
 Voor eventuele vragen over installatie of andere zaken neem contact op met de **Author** via jellekitz@gmail.com
 
+## Documentation
+
+Voor meer informatie over de vooruitgang van dit project bekijk mijn [wiki](https://github.com/jellekitz/Matching-application/wiki)
+
 ## License
 
-De Matching-application maakt gebruik van een MIT license, voor meer informatie bekijk de License.md.
+De Matching-application maakt gebruik van een MIT license, voor meer informatie bekijk de [License](https://github.com/jellekitz/Matching-application/blob/master/LICENSE).
 
 ## Bronnen
 
